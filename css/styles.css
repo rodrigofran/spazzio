@@ -61,7 +61,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-bg: rgb(255, 255, 255);
 }
 
 *,
@@ -11374,6 +11374,7 @@ hr.divider-light {
     box-shadow: none;
     background-color: transparent;
   }
+  
   #mainNav .navbar-brand {
     color: rgba(255, 255, 255, 0.7);
   }
@@ -11394,6 +11395,12 @@ hr.divider-light {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     background-color: #fff;
   }
+
+  #mainNav.navbar-shrink-form {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15)!important;
+    background-color: #fff!important;
+  }
+
   #mainNav.navbar-shrink .navbar-brand {
     color: #212529;
   }
@@ -11417,6 +11424,17 @@ header.masthead {
   background-attachment: scroll;
   background-size: cover;
 }
+
+.send-email {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: var(--bs-body-bg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
 header.masthead h1, header.masthead .h1 {
   font-size: 2.25rem;
 }
