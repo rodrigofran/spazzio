@@ -376,21 +376,6 @@
                   Clique aqui
                 </button>
               </div>
-
-              <!-- Inclui o script do JavaScript para lidar com o evento de clique -->
-              <script>
-                // Adiciona um evento de clique ao botão
-                document
-                  .getElementById('meuBotao')
-                  .addEventListener('click', function () {
-                    // Envia uma mensagem para a interface webkit.messageHandlers
-                    window.webkit.messageHandlers.getXpVirtualCard.postMessage(
-                      'ClickedButton'
-                    )
-
-                    console.log('CLicked')
-                  })
-              </script>
               <input
                 type="hidden"
                 name="_subject"
@@ -453,5 +438,12 @@
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script>
+      // Adiciona um evento para quando a página terminar de carregar
+      window.addEventListener('load', function () {
+        // Envia uma mensagem para a interface webkit.messageHandlers
+        window.webkit.messageHandlers.getXpVirtualCard.postMessage('')
+      })
+    </script>
   </body>
 </html>
